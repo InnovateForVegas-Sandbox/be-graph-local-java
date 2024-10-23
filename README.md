@@ -9,13 +9,15 @@ It also includes ANTLR for parsing code files. It can be ignored. It might be us
 Before you begin, ensure you have the following installed on your system:
 
 - Java Development Kit (JDK) 21 or higher
+> [!NOTE]  
+> Please edit the target and compile version in pom.xml if you want to use it on a different java version that you might have installed.
 - Apache Maven 3.6.0 or higher
 
 ## Getting Started
 
-See (LocalGraphCommand.java)[src/main/java/info/project_act/tessellation/cmd/LocalGraphCommand.java] for the entry-point of the application.
+See [LocalGraphCommand.java](src/main/java/info/project_act/tessellation/cmd/LocalGraphCommand.java) for the entry-point of the CLI application.
 
-### Convert n3 file to RDF.
+### Convert n3 file to RDF
 
 ```java
 mvn compile exec:java -Dexec.mainClass="info.project_act.tessellation.Main" -Dexec.args="convert -n src/main/resources/doap.n3"
